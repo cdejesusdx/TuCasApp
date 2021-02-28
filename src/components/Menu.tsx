@@ -11,7 +11,7 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { searchSharp, searchOutline, homeOutline, homeSharp, notificationsSharp, notificationsOutline, contractSharp, contractOutline, bookmarkOutline } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -23,44 +23,32 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Inbox',
-    url: '/page/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+    title: 'Inicio',
+    url: '/page/Inicio',
+    iosIcon: searchOutline,
+    mdIcon: searchSharp
   },
   {
-    title: 'Outbox',
-    url: '/page/Outbox',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp
+    title: 'Propiedades',
+    url: '/page/Propiedades',
+    iosIcon: homeOutline,
+    mdIcon: homeSharp
   },
   {
-    title: 'Favorites',
-    url: '/page/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
+    title: 'Publicar Anuncio',
+    url: '/page/Publicar Anuncio',
+    iosIcon: notificationsOutline,
+    mdIcon: notificationsSharp
   },
   {
-    title: 'Archived',
-    url: '/page/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
+    title: 'Contacto',
+    url: '/page/Contacto',
+    iosIcon: contractOutline,
+    mdIcon: contractSharp
   },
-  {
-    title: 'Trash',
-    url: '/page/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
-  },
-  {
-    title: 'Spam',
-    url: '/page/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp
-  }
 ];
 
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+const labels = ['Los más Buscados', 'Anuncios Recientes', 'Publica tu Propiedad' ];
 
 const Menu: React.FC = () => {
   const location = useLocation();
@@ -69,8 +57,8 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Inbox</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+          <IonListHeader>Inicio</IonListHeader>
+          <IonNote>TuCasApp</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
@@ -84,7 +72,7 @@ const Menu: React.FC = () => {
         </IonList>
 
         <IonList id="labels-list">
-          <IonListHeader>Notificaciones</IonListHeader>
+          <IonListHeader>Actividades</IonListHeader>
           {labels.map((label, index) => (
             <IonItem lines="none" key={index}>
               <IonIcon slot="start" icon={bookmarkOutline} />
