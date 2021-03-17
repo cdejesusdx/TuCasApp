@@ -24,19 +24,19 @@ interface AppPage {
 const appPages: AppPage[] = [
   {
     title: 'Inicio',
-    url: '/page/Inicio',
+    url: '/pages/Inicio',
     iosIcon: searchOutline,
     mdIcon: searchSharp
   },
   {
     title: 'Propiedades',
-    url: '/page/Propiedades',
+    url: '/pages/Propiedades',
     iosIcon: homeOutline,
     mdIcon: homeSharp
   },
   {
-    title: 'Publicar Anuncio',
-    url: '/page/Publicar Anuncio',
+    title: 'PublicarAnuncio',
+    url: '/pages/PublicarAnuncio',
     iosIcon: notificationsOutline,
     mdIcon: notificationsSharp
   },

@@ -23,7 +23,10 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import Inicio from './pages/Inicio'
 import Contacto from './pages/Contacto';
+import Propiedades from './pages/Propiedades';
+import PublicarAnuncio from './pages/PublicarAnuncio';
 
 const App: React.FC = () => {
   return (
@@ -41,7 +44,10 @@ const App: React.FC = () => {
               <Page />
             </Route>
 
+            <Route path="/pages/Inicio" component={Inicio} exact={true}/>
             <Route path="/pages/Contacto" component={Contacto} exact={true}/>
+            <Route path="/pages/Propiedades" component={Propiedades} exact={true}/>
+            <Route path="/pages/PublicarAnuncio" component={PublicarAnuncio} exact={true}/>
 
           </IonRouterOutlet>
         </IonSplitPane>
