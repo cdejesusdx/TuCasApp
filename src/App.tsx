@@ -23,6 +23,8 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import Contacto from './pages/Contacto';
+
 const App: React.FC = () => {
   return (
     <IonApp>
@@ -34,11 +36,14 @@ const App: React.FC = () => {
             <Route path="/" exact={true}>
               <Redirect to="/page/Inicio" />
             </Route>
+
             <Route path="/page/:name" exact={true}>
               <Page />
             </Route>
+
+            <Route path="/pages/Contacto" component={Contacto} exact={true}/>
+
           </IonRouterOutlet>
-          
         </IonSplitPane>
       </IonReactRouter>
     </IonApp>
